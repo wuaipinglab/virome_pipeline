@@ -45,7 +45,7 @@ ${FASTQC} ${RAW_DATA}/${SAMPLE_NAME}_combined_R1.fastq -t 22 -o ${OUTPUT_PATH}/0
 ${FASTQC} ${RAW_DATA}/${SAMPLE_NAME}_combined_R2.fastq -t 22 -o ${OUTPUT_PATH}/01qc/${SAMPLE_NAME}
 #1.2.trim
 mkdir ${OUTPUT_PATH}/02trim/${SAMPLE_NAME}
-java -jar ${TRIM} PE -threads 22 ${RAW_DATA}/${SAMPLE_NAME}_combined_R1.fastq ${RAW_DATA}/${SAMPLE_NAME}_combined_R2.fastq -baseout ${OUTPUT_PATH}/02trim/${SAMPLE_NAME}/${SAMPLE_NAME}_combined_trim ILLUMINACLIP:${ADAPTER}:2:30:10 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:10
+java -jar ${TRIM} PE -threads 22 ${RAW_DATA}/${SAMPLE_NAME}_combined_R1.fastq ${RAW_DATA}/${SAMPLE_NAME}_combined_R2.fastq -baseout ${OUTPUT_PATH}/02trim/${SAMPLE_NAME}/${SAMPLE_NAME}_combined_trim ILLUMINACLIP:${ADAPTER}:2:30:10 SLIDINGWINDOW:4:20 MINLEN:10
 #1.3.qc_again
 mkdir ${OUTPUT_PATH}/03qc_new/${SAMPLE_NAME}
 ${FASTQC} ${OUTPUT_PATH}/02trim/${SAMPLE_NAME}/${SAMPLE_NAME}_combined_trim_1P -t 22 -o ${OUTPUT_PATH}/03qc_new/${SAMPLE_NAME}
