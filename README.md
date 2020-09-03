@@ -5,21 +5,22 @@ Virome pipeline is a general pipeline constructed for viral metagenomes analysis
 
 ## Usage
 
-/Pipeline/virome_pipeline.sh /data/input /data/output sample_name sample_host /data/database /package
+```bash
+./Pipeline/virome_pipeline.sh /data/input /data/output sample_name sample_host /data/database /package
+```
 
-/data/input: path to input directory
+`./data/input`: path to input directory
 
-/data/output: path to output directory
+`./data/output`: path to output directory
 
-/sample_name: Used for directory name of sample
+`./sample_name`: Used for directory name of sample
 
-/sample_host: host type of sample, value = "Culicoides" or "Mosquito"
+`./sample_host`: host type of sample, value = "Culicoides" or "Mosquito"
 
-/data/database: Path to reference files and database files directory
+`./data/database`: Path to reference files and database files directory
 
-/package: Path to bioinformatics tools directory
+`./package`: Path to bioinformatics tools directory
 
 ## Citation
 
 Liu Lin, Shen Qin, Li Nan, He Yuwen, Pan Mei, Jin Yuting, Meng Jinxin, Wang Jinglin, Wu Aiping; Comparative viromes reveals the diversity, consistency and specificity of viral compositions in culicoides and mosquitos 
-
